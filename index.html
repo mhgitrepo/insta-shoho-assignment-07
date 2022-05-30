@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Insta Sohor</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Latest compiled and minified CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <!-- google Montserrat  font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+                <a class="navbar-brand" href="#">Insta-Sohor</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                            <i class="fa-solid fa-heart text-danger"></i>
+                        </li>
+
+                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main container mx-auto p-3">
+            <div id="posts">
+            </div>
+            <div id="liked">
+                <h1>Liked posts</h1>
+            </div>
+
+            <div id="reported">
+                <h1>Reported posts</h1>
+            </div>
+        </main>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- question and answer -->
+        <section class="m-5 p-5" id="q-n-a">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How does javascript work?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>Javascript is a client side synchronous and primarily single-threaded language works inside an "execution context". We can call this "execution context" like a big box and has two components in it. Javascript is not possible without this "execution context". The very first component is known for "memory component(here all the variables, fucntions are stored as key-value pairs) or variable environment" and the second one is "code component or thread of execution". This jsvascript language synchronously runs in the thread of execution/code environment. It means this language can run one command at a time in a specific order. Once the current line has been finished executing then javascript goes to the next line. In the browser javascript does work with the help of an special engine. Different browsers have specific different engine to run javascript. In google chrome and microsoft edge(they both are chromium based browser) they use "Javascript V8 engine" and "Chakra" respectively, on the other hand firefox use "SpiderMonkey" and there are so many other browsers and they use different type of engines. THis is the short explanation about how this language actually does work in a browser.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What does javascript event loop do?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>Javascriipt is a combination of "synchronous" and "asynchronous" events. Synchronous being one after another and asynchronous is things like "callabcks" or "promises". Here we can give an example to understand more about "Javascript Event Loop": Suppose, you are the casier of a restaurant and only one waiter is working at the restaurant to serve people. But the problem is when so many people come and order and take their seats, you are taking every orders and serving one after another. It's not possible to serve or take orders at a time from every tables. Here you used a mental note. You saw everyone and went to every corner and tables one after another and then took orders. Now it's time to serve. This time you used "first come first serve" policy. By doing this you just satified every customers. They all have got their orders served. Here two things you did when you served orders. First thing is called "stack" and the second things is "queue". "Stack" is where you served the first couple of orders and then "queue", here you served the waiting lists. This is actually an "Event Loop" in javascript.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+
+        <!-- add javascript  file  -->
+        <script src="./js/app.js"></script>
+    </body>
+</html>
